@@ -11,6 +11,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 list-style: none; /*Esto quita los puntos y decoracion de las listas*/
 text-decoration: none; /*Esto quita el subrayado de los enlaces*/
  color: white; 
+
 }
 
 body{
@@ -63,7 +64,7 @@ display: none; /*Lo pongo en none para que solo se vea cuando la pagina esté co
 
 #menu-icon{
 color: white;
-font-size: 135px;
+font-size: 60px;
 z-index: 101; /*para que esté sobre el header*/
 cursor: pointer; /*para que aparezca la manito cuando pongo el click encima*/
 
@@ -127,17 +128,18 @@ line-height: 1.9;
 }
 
 
-.hero-img img{
-width: 200px;
-margin: 10% 0 0 10%;
-height: auto;
-transition: all 5s linear; /*esto hace que la treansicion sea lineal*/
+.hero-img img {
+        width: 200px;         /* Ajusta el tamaño del círculo */
+        height: 200px;        /* Debe ser igual al width para mantener la forma circular */
+        border-radius: 50%;   /* Esto hace que la imagen sea un círculo */
+       /* object-fit: cover;     Asegura que la imagen se recorte correctamente sin deformarse */
+    margin: 35%;
+    transition: transform 5s linear, opacity 5s linear; /* Suaviza la animación */
 }
 
-.hero-img img:hover{
-width: 450px;
-opacity: 0.6;
-
+.hero-img img:hover {
+    transform: scale(1.2); /*Agranda toda la imagen de manera uniforme */
+    opacity: 0.6;
 }
 
 .hero-text a{
@@ -237,7 +239,7 @@ padding-top: 0;
 .hero-img img{
     width: 80%;
     margin: 10% 0 0 10%;
-
+    max-width: 50%; 
 }
 
 .hero-text p{
@@ -260,10 +262,12 @@ padding-top: 0;
 }
 
 .hero-text{text-align: center;
-padding-top: 100px;}
+padding-top: 70px;}
 
 .hero-img img{
     margin: 0;
+    text-align: center;
+    max-width: 35%; 
 }
 
 .hero{
@@ -293,6 +297,11 @@ margin: 7px 0;
 
 }
 
+
+h5{
+    margin-right: 70%;
+    margin-bottom: 3%;
+}
 
 #menu-toggle:checked + label.menu-icon-action + ul {
     right: 0;
